@@ -27,19 +27,19 @@
 ### 📌 Data Preparation & Variable Definitions / 資料準備與變數定義
 
 #### 1. Dataset & Sample Size / 資料集與樣本數
-* **English:** Based on the U.S. CDC 2007 Youth Risk Behavior Survey (`YRBS_2007.csv`), listwise deletion was applied to handle missing values, retaining a final valid sample size of 12,894 records.
-* **中文:** 採用美國 CDC 2007 年青少年危險行為調查（`YRBS_2007.csv`）資料集，透過嚴格剔除缺失值（Listwise Deletion）進行資料處理，最終保留 12,894 筆有效分析樣本。
+* Based on the U.S. CDC 2007 Youth Risk Behavior Survey (`YRBS_2007.csv`), listwise deletion was applied to handle missing values, retaining a final valid sample size of 12,894 records.
+* 採用美國 CDC 2007 年青少年危險行為調查（`YRBS_2007.csv`）資料集，透過嚴格剔除缺失值（Listwise Deletion）進行資料處理，最終保留 12,894 筆有效分析樣本。
 
 #### 2. Operational Definitions of Variables / 變數之操作化定義
 * **Dependent Variable (Y, 應變數): `BMI` (Body Mass Index)**
-  * *English:* A continuous numeric variable representing weight status. Calculated using the formula: $\text{Weight (kg)} / \text{Height (m)}^2$, derived from original survey items `HowMuchDoYouWeighWithoutShoesInKG` and `HowTallAreYouWithoutShoesInMeters`.
-  * *中文:* 連續型數值變數，用以衡量青少年體態與肥胖程度。計算公式為：$\text{體重 (KG)} / \text{身高 (M)}^2$，數據源自原始欄位 `HowMuchDoYouWeighWithoutShoesInKG` 與 `HowTallAreYouWithoutShoesInMeters`。
+  * A continuous numeric variable representing weight status. Calculated using the formula: $\text{Weight (kg)} / \text{Height (m)}^2$, derived from original survey items `HowMuchDoYouWeighWithoutShoesInKG` and `HowTallAreYouWithoutShoesInMeters`.
+  * 連續型數值變數，用以衡量青少年體態與肥胖程度。計算公式為：$\text{體重 (KG)} / \text{身高 (M)}^2$，數據源自原始欄位 `HowMuchDoYouWeighWithoutShoesInKG` 與 `HowTallAreYouWithoutShoesInMeters`。
 * **Independent Variable (X, 自變數): `Activity_Group` (Physical Activity Level)**
-  * *English:* An ordinal categorical variable derived from the original continuous survey item `PhysicalActivity50rMoreDays` (the number of days with at least 60 minutes of physical activity in the past 7 days), recoded into three explicit empirical groups:
+  * An ordinal categorical variable derived from the original continuous survey item `PhysicalActivity50rMoreDays` (the number of days with at least 60 minutes of physical activity in the past 7 days), recoded into three explicit empirical groups:
     1. `Low (0–2 days)`: Sedentary or low-activity lifestyle (0 to 2 days of exercise per week).
     2. `Moderate (3–4 days)`: Baseline active lifestyle (3 to 4 days of exercise per week).
     3. `High (5–7 days)`: Highly active lifestyle meeting advanced health guidelines (5 to 7 days of exercise per week).
-  * *中文:* 順序型類別變數，由原始連續型欄位 `PhysicalActivity50rMoreDays`（過去7天內，運動累積達60分鐘以上的天數）重新編碼而成，分為三個明確的實證群組：
+  * 順序型類別變數，由原始連續型欄位 `PhysicalActivity50rMoreDays`（過去7天內，運動累積達60分鐘以上的天數）重新編碼而成，分為三個明確的實證群組：
     1. `Low (0-2天)`: 久坐或低活動量生活型態（每週運動 0 至 2 天）。
     2. `Moderate (3-4天)`: 具備基礎活動量生活型態（每週運動 3 至 4 天）。
     3. `High (5-7天)`: 高活動量且符合進階健康指引之生活型態（每週運動 5 至 7 天）。
