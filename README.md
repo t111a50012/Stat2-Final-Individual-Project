@@ -13,7 +13,7 @@
 
 ## 2. Core Links / 專案核心連結
 * **Project Repository (GitHub 儲存庫):** https://github.com/.....
-* **Presentation Video (YouTube 簡報影片):** https://youtu.be/bmpF1FyXiS4 
+* **Presentation Video (YouTube):** https://youtu.be/bmpF1FyXiS4 
 
 ---
 
