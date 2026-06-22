@@ -3,54 +3,116 @@
 # Analysis of the Difference between Physical Activity Frequency and BMI in Adolescents
 # 青少年運動頻率與 BMI 之差異分析
 
-## Student Information / 學生資訊
-| Item / 項目 | Details / 詳細資訊 |
-| :--- | :--- |
-| **Name / 姓名** | 楊書雅 (Shu-Ya Yang) |
-| **Student ID / 學號** | 111A50012 |
-| **Class / 班級** | 工管三乙 |
-
-## Project Repository / 專案倉庫
-* https://github.com/[填入你的GitHub網址]
-
-## Presentation Video / 簡報影片
-* https://youtube.com/[填入你的YouTube影片網址]
+## 1. Student Information / 學生資訊
+* **Name (姓名):** 楊書雅 (Shu-Ya Yang)
+* **Student ID (學號):** 111A50012
+* **Class (班級):** 工管三乙
 
 ---
 
-## 專案概述 / Project Overview
-
-| Language / 語言 | Description / 概述內容 |
-| :--- | :--- |
-| **English** | This study utilizes the U.S. CDC 2007 Youth Risk Behavior Survey (`YRBS_2007.csv`) dataset to investigate whether adolescents' physical activity frequency significantly affects their Body Mass Index (BMI). The project strictly follows a standard data science workflow: **Research Question → Data Preparation → Statistical Method → Result → Interpretation**. |
-| **中文對照** | 本研究使用美國 CDC 2007 年青少年危險行為調查（`YRBS_2007.csv`）真實資料集，探討青少年的運動頻率是否會顯著影響其身體質量指數（BMI）。本專案嚴格遵循標準資料科學工作流程：**研究問題 → 資料準備 → 統計方法 → 結果呈現 → 實質詮釋**。 |
-
-### 核心結論 / Core Conclusion
-* **English:** One-way ANOVA and Tukey's HSD post-hoc tests reveal that groups with higher weekly exercise days have a significantly lower average BMI than low-activity groups ($p < 0.05$). However, the post-hoc test further confirms that "frequency" is the key: exercising 5–7 days a week brings the most significant health benefits, whereas exercising 3–4 days shows no statistical difference compared to 0–2 days.
-* **中文對照:** 單因子變異數分析（One-way ANOVA）與 Tukey's HSD 事後檢定結果顯示，每週運動天數較高的群組，其平均 BMI 顯著低於低運動量群組（$p < 0.05$）。然而，事後檢定進一步證實「運動頻率」是關鍵：每週運動 5-7 天能帶來最顯著的體態健康效益，而每週僅運動 3-4 天與 0-2 天在統計上則無顯著差異。
+## 2. Core Links / 專案核心連結
+* **Project Repository (GitHub 儲存庫):** https://github.com/.....
+* **Presentation Video (YouTube 簡報影片):** https://youtube.com/.....
 
 ---
 
-## 1. 研究問題與變數定義 / Research Question & Variable Definitions
+## 3. Project Workflow & Empirical Data / 專案核心架構與數據呈現
 
-| Variable / 變數類型 | Variable Name / 變數名稱 | Data Type / 數據類型 | Description (English / 中文) |
-| :--- | :--- | :--- | :--- |
-| **Research Question<br>研究問題** | \- | \- | Do students with different levels of physical activity (Low, Moderate, High) differ significantly in their average BMI?<br>不同體育參與程度（不運動組、輕度運動組、頻繁運動組）的學生，其平均 BMI 是否有顯著不同？ |
-| **Dependent (Y)<br>應變數** | `BMI` | Continuous<br>連續型數值 | Calculated using the official formula: $\text{Weight(kg)} / \text{Height(m)}^2$.<br>利用原始資料的身高與體重公式計算而得之身體質量指數。 |
-| **Independent (X)<br>自變數** | `Activity_Group` | Categorical (Ordinal)<br>類別型順序變數 | Recoded based on the number of days exercising for $\ge 60$ mins in the past 7 days:<br>根據過去 7 天運動達 60 分鐘的天數進行科學化重編碼：<br>• **Low (0-2 days)**: Sedentary or low activity. / 久坐或低活動量型態。<br>• **Moderate (3-4 days)**: Baseline activity. / 基礎活動量型態。<br>• **High (5-7 days)**: Meets health guidelines. / 符合高活動量之健康指引。 |
+### 📌 Research Question / 研究問題
+* **English:** Do U.S. adolescents with different levels of weekly physical activity (Low, Moderate, High) have significantly different average Body Mass Index (BMI) values?
+* **中文:** 不同體育活動參與程度（低、中、高運動量組）的美國青少年，其平均身體質量指數（BMI）是否存在顯著的統計學差異？
 
 ---
 
-## 2. 工作流程與目錄結構 / Workflow & Directory Structure
+### 📌 Data Preparation & Variable Definitions / 資料準備與變數定義
 
+#### 1. Dataset & Sample Size / 資料集與樣本數
+* **English:** Based on the U.S. CDC 2007 Youth Risk Behavior Survey (`YRBS_2007.csv`), listwise deletion was applied to handle missing values, retaining a final valid sample size of 12,894 records.
+* **中文:** 採用美國 CDC 2007 年青少年危險行為調查（`YRBS_2007.csv`）資料集，透過嚴格剔除缺失值（Listwise Deletion）進行資料處理，最終保留 12,894 筆有效分析樣本。
+
+#### 2. Operational Definitions of Variables / 變數之操作化定義
+* **Dependent Variable (Y, 應變數): `BMI` (Body Mass Index)**
+  * *English:* A continuous numeric variable representing weight status. Calculated using the formula: $\text{Weight (kg)} / \text{Height (m)}^2$, derived from original survey items `HowMuchDoYouWeighWithoutShoesInKG` and `HowTallAreYouWithoutShoesInMeters`.
+  * *中文:* 連續型數值變數，用以衡量青少年體態與肥胖程度。計算公式為：$\text{體重 (KG)} / \text{身高 (M)}^2$，數據源自原始欄位 `HowMuchDoYouWeighWithoutShoesInKG` 與 `HowTallAreYouWithoutShoesInMeters`。
+* **Independent Variable (X, 自變數): `Activity_Group` (Physical Activity Level)**
+  * *English:* An ordinal categorical variable derived from the original continuous survey item `PhysicalActivity50rMoreDays` (the number of days with at least 60 minutes of physical activity in the past 7 days), recoded into three explicit empirical groups:
+    1. `Low (0–2 days)`: Sedentary or low-activity lifestyle (0 to 2 days of exercise per week).
+    2. `Moderate (3–4 days)`: Baseline active lifestyle (3 to 4 days of exercise per week).
+    3. `High (5–7 days)`: Highly active lifestyle meeting advanced health guidelines (5 to 7 days of exercise per week).
+  * *中文:* 順序型類別變數，由原始連續型欄位 `PhysicalActivity50rMoreDays`（過去7天內，運動累積達60分鐘以上的天數）重新編碼而成，分為三個明確的實證群組：
+    1. `Low (0-2天)`: 久坐或低活動量生活型態（每週運動 0 至 2 天）。
+    2. `Moderate (3-4天)`: 具備基礎活動量生活型態（每週運動 3 至 4 天）。
+    3. `High (5-7天)`: 高活動量且符合進階健康指引之生活型態（每週運動 5 至 7 天）。
+
+#### 【Descriptive Statistics Table / 描述性統計摘要表】
+| Activity Group (自變數分組) | Sample Count ($N$, 樣本數) | BMI Mean (平均數) | BMI Std (標準差) |
+| :--- | :---: | :---: | :---: |
+| **High (5–7 days)** | 5,461 | 23.45 | 4.56 |
+| **Moderate (3–4 days)** | 2,789 | 23.91 | 5.05 |
+| **Low (0–2 days)** | 4,644 | 24.12 | 5.39 |
+
+---
+
+### 📌 Statistical Method / 統計方法
+* **English:** * **Omnibus Test:** One-way Analysis of Variance (One-way ANOVA) to test the overall null hypothesis ($H_0: \mu_{\text{Low}} = \mu_{\text{Moderate}} = \mu_{\text{High}}$) that all group means are equal.
+  * **Post-hoc Test:** Tukey's Honestly Significant Difference (Tukey's HSD) for pairwise multiple comparisons to locate specific group differences while controlling the family-wise Type I error rate at $\alpha=0.05$.
+* **中文:** * **整體檢定:** 單因子變異數分析（One-way ANOVA），用以檢定整體虛無假設（$H_0: \mu_{\text{低}} = \mu_{\text{中}} = \mu_{\text{高}}$），即所有運動組別的平均 BMI 是否相等。
+  * **事後檢定:** Tukey's HSD 事後多重比較檢定，在嚴格控制家庭期型一錯誤率（$\alpha=0.05$）的前提下進行兩兩成對對比，精準定位組別間的具體差異。
+
+---
+
+### 📌 Results / 結果呈現
+
+#### 1. Overall Test: One-way ANOVA Table / 整體檢定：變異數分析表
+| Source of Variation (變異來源) | Sum of Squares ($SS$, 平方和) | Degrees of Freedom ($df$, 自由度) | $F$-statistic ($F$ 值) | $p$-value ($p$ 值) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Group (組間效應)** | 1,153.139 | 2.0 | **23.237** | **$8.442 \times 10^{-11}$** |
+| **Residual (組內殘差)** | 319,859.363 | 12,891.0 | — | — |
+* *Decision: Since the p-value is far less than 0.05, we successfully reject the null hypothesis ($H_0$). / 統計決策：因 $p$ 值遠小於 0.05，成功拒絕虛無假設。*
+
+#### 2. Pairwise Comparisons: Tukey's HSD Table / 兩兩比較：事後檢定表
+| Comparison Pair (兩兩對比組別) | Mean Diff (均值差) | Adjusted $p$-value (調整後 $p$ 值) | 95% CI (信心區間) | Reject $H_0$ (具顯著差異) |
+| :--- | :---: | :---: | :---: | :---: |
+| **High** vs **Low** | -0.664 | 0.000 ( < 0.001 ) | [-0.897, -0.431] | **True (是)** |
+| **High** vs **Moderate** | -0.451 | 0.0003 | [-0.723, -0.179] | **True (是)** |
+| **Low** vs **Moderate** | 0.213 | 0.1745 | [-0.067, 0.493] | **False (否)** |
+
+---
+
+### 📌 Interpretation & Recommendations / 實質詮釋與政策建議
+
+* **English:** * **Final Results:** The empirical data reveals a critical threshold effect: the `High` activity group (5–7 days) exhibits a significantly lower average BMI than both the `Low` activity group ($\text{meandiff} = -0.664$, $p < 0.001$) and the `Moderate` activity group ($\text{meandiff} = -0.451$, $p < 0.001$). Crucially, there is no statistically significant difference in average BMI between the `Moderate` and `Low` activity groups ($p = 0.1745$). This demonstrates that regular exercise is effective for weight regulation, but **"frequency" is the deciding factor**.
+  * **Core Recommendations:** Exercising only 3–4 days a week yields no statistically distinct benefit over being sedentary in shifting collective BMI. Therefore, public health and school physical education policies must move away from generic "exercise more" slogans and actively implement targeted interventions that encourage adolescents to increase their physical activity to a high frequency of **5–7 days a week** to unlock substantial health and weight-regulation benefits.
+* **中文:** * **最終結果:** 大數據實證顯示出關鍵的「門檻效應」：`高運動量組 (5-7天)` 的平均 BMI 顯著低於 `低運動量組`（均值差 $= -0.664$，$p < 0.001$）與 `中運動量組`（均值差 $= -0.451$，$p < 0.001$）。至關重要的是，`中運動量組 (3-4天)` 與 `低運動量組 (0-2天)` 之間的平均 BMI 在統計上**完全沒有顯著差異**（$p = 0.1745$）。這證實了規律運動雖能調節體態，但**「運動頻率」才是核心決定因素**。
+  * **核心建議:** 每週僅運動 3-4 天在現實世界中，與幾乎不運動相比，並未能實質拉低大眾整體的平均 BMI。因此，未來的公共衛生政策與學校體育課程規劃，不應僅停留在「有運動就好」的泛泛口號，而必須制定具體的干預計畫，積極鼓勵並引導青少年將運動頻率提升至**每週 5 至 7 天**的高頻率水平，方能真正發揮維持健康體態與調節體重風險的實質效益。
+
+---
+
+## 4. Repository Structure / 儲存庫目錄分層架構
 ```text
+.
 ├── data/
-│   ├── raw/         # Raw dataset / 原始 YRBS_2007.csv 真實數據資料夾
-│   └── processed/   # Cleaned data / 清理後數據 (yrbs_cleaned.csv, yrbs_recoded.csv)
+│   ├── raw/
+│   │   └── YRBS_2007.csv               # Raw dataset / 原始資料
+│   └── processed/
+│       ├── yrbs_cleaned.csv            # Cleaned data (missing values removed)
+│       └── yrbs_recoded.csv            # Final processing with recoded activity groups
+├── notebooks/
+│   ├── 01_data_check.ipynb             # Step 1: Data checking & recoding
+│   ├── 02_eda_anova.ipynb              # Step 2: Exploratory Data Analysis & ANOVA
+│   └── 03_posthoc_inference.ipynb      # Step 3: Tukey's HSD post-hoc test & outputs
 ├── outputs/
-│   ├── figures/     # Plots / 高品質統計圖表 (Distribution Histplot, Boxplot)
-│   ├── tables/      # Structured tables / 結構化統計摘要表 (ANOVA, Tukey HSD tables)
-│   └── summary/     # Final summary report / 終端真實統計總結報告 (.txt)
-├── references/      # Metadata & notes / 詮釋資料與變數定義文件 (.md)
-├── notebooks/       # Jupyter Notebook scripts / 核心實驗腳本
-└── README.md        # Documentation / 專案首頁說明文件
+│   ├── figures/
+│   │   ├── continuous_histogram.png    # BMI distribution histogram
+│   │   ├── behavior_bar_chart.png      # Group sample counts
+│   │   └── bmi_activity_boxplot.png    # Final statistical inference boxplot
+│   ├── tables/
+│   │   ├── eda_summary_table.csv       # Group descriptive statistics
+│   │   ├── inference_summary_table.csv # ANOVA summary table
+│   │   └── tukey_posthoc_table.csv     # Pairwise Tukey's HSD results table
+│   └── summary/
+│       └── final_summary.txt           # Automated statistical text summary
+└── references/
+    ├── variable_definitions.md         # Metadata for independent & dependent variables
+    ├── recoding_rules.md               # Coding logic (Continuous to ordinal days)
+    └── variable_notes.md               # CDC BMI benchmarks & ANOVA assumptions
