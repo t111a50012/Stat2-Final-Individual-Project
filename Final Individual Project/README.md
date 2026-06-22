@@ -129,3 +129,4 @@
     ├── variable_definitions.md         # Metadata for independent & dependent variables
     ├── recoding_rules.md               # Coding logic (Continuous to ordinal days)
     └── variable_notes.md               # CDC BMI benchmarks & ANOVA assumptions
+
