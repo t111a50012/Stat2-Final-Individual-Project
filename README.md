@@ -1,4 +1,4 @@
-# Final Individual Project / 期末個人專題
+# Final Individual Project / 統計實習期末個人專題
 
 
 ## Analysis of the Difference between Physical Activity Frequency and BMI in Adolescents   
