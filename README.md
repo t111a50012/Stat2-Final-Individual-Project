@@ -63,7 +63,7 @@
 ### 📌 Statistical Method / 統計方法
 * **Omnibus Test:** One-way Analysis of Variance (One-way ANOVA) to test the overall null hypothesis ($H_0: \mu_{\text{Low}} = \mu_{\text{Moderate}} = \mu_{\text{High}}$) that all group means are equal.
   * **Post-hoc Test:** Tukey's Honestly Significant Difference (Tukey's HSD) for pairwise multiple comparisons to locate specific group differences while controlling the family-wise Type I error rate at $\alpha=0.05$.
-* * **整體檢定:** 單因子變異數分析（One-way ANOVA），用以檢定整體虛無假設（$H_0: \mu_{\text{低}} = \mu_{\text{中}} = \mu_{\text{高}}$），即所有運動組別的平均 BMI 是否相等。
+* * **整體檢定:** 單因子變異數分析（One-way ANOVA），用以檢定整體虛無假設，即所有運動組別的平均 BMI 是否相等。
   * **事後檢定:** Tukey's HSD 事後多重比較檢定，在嚴格控制家庭期型一錯誤率（$\alpha=0.05$）的前提下進行兩兩成對對比，精準定位組別間的具體差異。
 
 ---
