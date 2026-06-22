@@ -120,8 +120,10 @@
 │   │   ├── eda_summary_table.csv       # Group descriptive statistics
 │   │   ├── inference_summary_table.csv # ANOVA summary table
 │   │   └── tukey_posthoc_table.csv     # Pairwise Tukey's HSD results table
-│   └── summary/
-│       └── final_summary.txt           # Automated statistical text summary
+│   ├── summary/
+│   │   └── final_summary.txt           # Automated statistical text summary
+│   └── report/
+│       └── report_summary.pdf          # Final project report summary PDF / 專案總結報告
 └── references/
     ├── variable_definitions.md         # Metadata for independent & dependent variables
     ├── recoding_rules.md               # Coding logic (Continuous to ordinal days)
