@@ -38,7 +38,7 @@
 * **Dependent Variable (Y, 應變數): `BMI` (Body Mass Index)**
   * A continuous numeric variable representing weight status. Calculated using the formula: $\text{Weight (kg)} / \text{Height (m)}^2$, derived from original survey items `HowMuchDoYouWeighWithoutShoesInKG` and `HowTallAreYouWithoutShoesInMeters`.
     
-  * 連續型數值變數，用以衡量青少年體態與肥胖程度。計算公式為：$\text{Weight (kg)} / \text{Height (m)}^2$（體重除以身高的平方），數據源自原始問卷欄位 `HowMuchDoYouWeighWithoutShoesInKG` 與 `HowTallAreYouWithoutShoesInMeters`。
+  * 連續型數值變數，用以衡量青少年體態與肥胖程度。計算公式為：體重除以身高的平方，數據源自原始問卷欄位 `HowMuchDoYouWeighWithoutShoesInKG` 與 `HowTallAreYouWithoutShoesInMeters`。
     
 * **Independent Variable (X, 自變數): `Activity_Group` (Physical Activity Level)**
   * An ordinal categorical variable derived from the original continuous survey item `PhysicalActivity50rMoreDays` (the number of days with at least 60 minutes of physical activity in the past 7 days), recoded into three explicit empirical groups:
@@ -110,7 +110,7 @@
 ├── notebooks/
 │   ├── 01_data_check.ipynb             # Step 1: Data checking & recoding
 │   ├── 02_eda_anova.ipynb              # Step 2: Exploratory Data Analysis & ANOVA
-│   └── 03_posthoc_inference.ipynb      # Step 3: Tukey's HSD post-hoc test & outputs
+│   └── 03_inference.ipynb      # Step 3: Tukey's HSD post-hoc test & outputs
 ├── outputs/
 │   ├── figures/
 │   │   ├── continuous_histogram.png    # BMI distribution histogram
@@ -123,7 +123,7 @@
 │   ├── summary/
 │   │   └── final_summary.txt           # Automated statistical text summary
 │   └── report/
-│       └── report_summary.pdf          # Final project report summary PDF / 專案總結報告
+│       └── summary.pdf          # Final project report summary PDF / 專案總結報告
 └── references/
     ├── variable_definitions.md         # Metadata for independent & dependent variables
     ├── recoding_rules.md               # Coding logic (Continuous to ordinal days)
