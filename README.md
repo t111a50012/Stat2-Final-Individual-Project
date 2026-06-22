@@ -91,7 +91,7 @@
 
 ### 📌 Interpretation & Recommendations / 實質詮釋與政策建議
 
-* **Final Results:** The empirical data reveals a critical threshold effect: the `High` activity group (5–7 days) exhibits a significantly lower average BMI than both the `Low` activity group ($\text{meandiff} = 0.664$, $p < 0.001$) and the `Moderate` activity group ($\text{meandiff} = 0.451$, $p < 0.001$). Crucially, there is no statistically significant difference in average BMI between the `Moderate` and `Low` activity groups ($p = 0.1745$). This demonstrates that regular exercise is effective for weight regulation, but **"frequency" is the deciding factor**.
+* **Final Results:** The empirical data reveals a critical threshold effect: the `High` activity group (5–7 days) exhibits a significantly lower average BMI than both the `Low` activity group ($\text{meandiff} = 0.664$, p < 0.001) and the `Moderate` activity group ($\text{meandiff} = 0.451$, $p < 0.001$). Crucially, there is no statistically significant difference in average BMI between the `Moderate` and `Low` activity groups ($p = 0.1745$). This demonstrates that regular exercise is effective for weight regulation, but **"frequency" is the deciding factor**.
   
 * **Core Recommendations:** Exercising only 3–4 days a week yields no statistically distinct benefit over being sedentary in shifting collective BMI. Therefore, public health and school physical education policies must move away from generic "exercise more" slogans and actively implement targeted interventions that encourage adolescents to increase their physical activity to a high frequency of **5–7 days a week** to unlock substantial health and weight-regulation benefits.
     
