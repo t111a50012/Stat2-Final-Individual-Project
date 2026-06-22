@@ -22,7 +22,7 @@
 
 ### 📌 Research Question / 研究問題
 * Do U.S. adolescents with different levels of weekly physical activity (Low, Moderate, High) have significantly different average Body Mass Index (BMI) values?
-* 不同體育活動參與程度（低、中、高運動量組）的美國青少年，其平均身體質量指數（BMI）是否存在顯著的統計學差異？
+不同體育活動參與程度（低、中、高運動量組）的美國青少年，其平均身體質量指數（BMI）是否存在顯著的統計學差異？
 
 ---
 
