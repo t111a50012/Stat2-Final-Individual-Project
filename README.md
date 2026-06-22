@@ -22,6 +22,7 @@
 
 ### 📌 Research Question / 研究問題
 * Do U.S. adolescents with different levels of weekly physical activity (Low, Moderate, High) have significantly different average Body Mass Index (BMI) values?
+  
 不同體育活動參與程度（低、中、高運動量組）的美國青少年，其平均身體質量指數（BMI）是否存在顯著的統計學差異？
 
 ---
@@ -30,12 +31,15 @@
 
 #### 1. Dataset & Sample Size / 資料集與樣本數
 * Based on the U.S. CDC 2007 Youth Risk Behavior Survey (`YRBS_2007.csv`), listwise deletion was applied to handle missing values, retaining a final valid sample size of 12,894 records.
+  
 * 採用美國 CDC 2007 年青少年危險行為調查（`YRBS_2007.csv`）資料集，透過嚴格剔除缺失值（Listwise Deletion）進行資料處理，最終保留 12,894 筆有效分析樣本。
 
 #### 2. Operational Definitions of Variables / 變數之操作化定義
 * **Dependent Variable (Y, 應變數): `BMI` (Body Mass Index)**
   * A continuous numeric variable representing weight status. Calculated using the formula: $\text{Weight (kg)} / \text{Height (m)}^2$, derived from original survey items `HowMuchDoYouWeighWithoutShoesInKG` and `HowTallAreYouWithoutShoesInMeters`.
+    
   * 連續型數值變數，用以衡量青少年體態與肥胖程度。計算公式為：$\text{Weight (kg)} / \text{Height (m)}^2$（體重除以身高的平方），數據源自原始問卷欄位 `HowMuchDoYouWeighWithoutShoesInKG` 與 `HowTallAreYouWithoutShoesInMeters`。
+    
 * **Independent Variable (X, 自變數): `Activity_Group` (Physical Activity Level)**
   * An ordinal categorical variable derived from the original continuous survey item `PhysicalActivity50rMoreDays` (the number of days with at least 60 minutes of physical activity in the past 7 days), recoded into three explicit empirical groups:
     1. `Low (0–2 days)`: Sedentary or low-activity lifestyle (0 to 2 days of exercise per week).
@@ -83,9 +87,12 @@
 
 ### 📌 Interpretation & Recommendations / 實質詮釋與政策建議
 
-* **English:** * **Final Results:** The empirical data reveals a critical threshold effect: the `High` activity group (5–7 days) exhibits a significantly lower average BMI than both the `Low` activity group ($\text{meandiff} = -0.664$, $p < 0.001$) and the `Moderate` activity group ($\text{meandiff} = -0.451$, $p < 0.001$). Crucially, there is no statistically significant difference in average BMI between the `Moderate` and `Low` activity groups ($p = 0.1745$). This demonstrates that regular exercise is effective for weight regulation, but **"frequency" is the deciding factor**.
+* **Final Results:** The empirical data reveals a critical threshold effect: the `High` activity group (5–7 days) exhibits a significantly lower average BMI than both the `Low` activity group ($\text{meandiff} = -0.664$, $p < 0.001$) and the `Moderate` activity group ($\text{meandiff} = -0.451$, $p < 0.001$). Crucially, there is no statistically significant difference in average BMI between the `Moderate` and `Low` activity groups ($p = 0.1745$). This demonstrates that regular exercise is effective for weight regulation, but **"frequency" is the deciding factor**.
+  
   * **Core Recommendations:** Exercising only 3–4 days a week yields no statistically distinct benefit over being sedentary in shifting collective BMI. Therefore, public health and school physical education policies must move away from generic "exercise more" slogans and actively implement targeted interventions that encourage adolescents to increase their physical activity to a high frequency of **5–7 days a week** to unlock substantial health and weight-regulation benefits.
-* **中文:** * **最終結果:** 大數據實證顯示出關鍵的「門檻效應」：`高運動量組 (5-7天)` 的平均 BMI 顯著低於 `低運動量組`（均值差 $= -0.664$，$p < 0.001$）與 `中運動量組`（均值差 $= -0.451$，$p < 0.001$）。至關至要的是，`中運動量組 (3-4天)` 與 `低運動量組 (0-2天)` 之間的平均 BMI 在統計上**完全沒有顯著差異**（$p = 0.1745$）。這證實了規律運動雖能調節體態，但**「運動頻率」才是核心決定因素**。
+    
+* **最終結果:** 大數據實證顯示出關鍵的「門檻效應」：`高運動量組 (5-7天)` 的平均 BMI 顯著低於 `低運動量組`（均值差 $= -0.664$，$p < 0.001$）與 `中運動量組`（均值差 $= -0.451$，$p < 0.001$）。至關至要的是，`中運動量組 (3-4天)` 與 `低運動量組 (0-2天)` 之間的平均 BMI 在統計上**完全沒有顯著差異**（$p = 0.1745$）。這證實了規律運動雖能調節體態，但**「運動頻率」才是核心決定因素**。
+  
   * **核心建議:** 每週僅運動 3-4 天在現實世界中，與幾乎不運動相比，並未能實質拉低大眾整體平均的 BMI。因此，未來的公共衛生政策與學校體育課程規劃，不應僅停留在「有運動就好」的泛泛口號，而必須制定具體的干預計畫，積極鼓勵並引導青少年將運動頻率提升至**每週 5 至 7 天**的高頻率水平，方能真正發揮維持健康體態與調節體重風險的實質效益。
 
 ---
