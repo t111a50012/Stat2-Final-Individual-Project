@@ -1,6 +1,7 @@
 # Final-Individual-Project
 
-## Analysis of the Difference between Physical Activity Frequency and BMI in Adolescents   /     青少年運動頻率與 BMI 之差異分析
+## Analysis of the Difference between Physical Activity Frequency and BMI in Adolescents   
+## 青少年運動頻率與 BMI 之差異分析
 
 # Final Individual Project / 期末個人專題
 
