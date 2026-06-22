@@ -113,7 +113,7 @@
 ├── notebooks/
 │   ├── 01_data_check.ipynb             # Step 1: Data checking & recoding
 │   ├── 02_eda_anova.ipynb              # Step 2: Exploratory Data Analysis & ANOVA
-│   └── 03_inference.ipynb      # Step 3: Tukey's HSD post-hoc test & outputs
+│   └── 03_inference.ipynb              # Step 3: Tukey's HSD post-hoc test & outputs
 ├── outputs/
 │   ├── figures/
 │   │   ├── continuous_histogram.png    # BMI distribution histogram
