@@ -5,7 +5,7 @@
 ## 青少年運動頻率與 BMI 之差異分析
 
 ## 1. Student Information / 學生資訊
-* **Name (姓名):** 楊書雅 (Shu-Ya Yang)
+* **Name (姓名):** 楊書雅 
 * **Student ID (學號):** 111A50012
 * **Class (班級):** 工管三乙
 
